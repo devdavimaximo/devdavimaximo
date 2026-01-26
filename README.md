@@ -58,7 +58,7 @@ Busco evoluir constantemente em lógica de programação, desenvolvimento web e 
 
 ## 📊 GitHub Stats
 
-![Davi GitHub stats](https://github-readme-stats.vercel.app/api?username=SEU_USERNAME_AQUI&show_icons=true&theme=dark)
+![Davi GitHub stats](https://github-readme-stats.vercel.app/api?username=devdavimaximo&show_icons=true&theme=dark)
 
 ---
 
