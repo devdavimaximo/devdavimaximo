@@ -2,9 +2,6 @@
 
 ### Desenvolvedor Full Stack | Foco C# & .NET
 
-💻 Desenvolvedor em formação **Back-end**, **Front-end** e construção de projetos práticos para portfólio.  
-🚀 Estudando e aplicando boas práticas de desenvolvimento, arquitetura e versionamento de código.
-
 ---
 
 ## 🧑‍💻 Sobre mim
