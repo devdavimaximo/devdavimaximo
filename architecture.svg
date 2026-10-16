@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="540" viewBox="0 0 1200 540" role="img" aria-label="Clean Architecture: Infrastructure envolve Application, que envolve Domain. As dependências apontam para dentro.">
+  <style>
+    text { font-family: ui-monospace, 'SFMono-Regular', 'Cascadia Code', Menlo, Consolas, monospace; }
+    .spin { transform-box: fill-box; transform-origin: center; animation: spin 40s linear infinite; }
+    .spin.rev { animation-direction: reverse; animation-duration: 28s; }
+    .spin.fast { animation-duration: 16s; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .core { transform-box: fill-box; transform-origin: center; animation: beat 3s ease-in-out infinite; }
+    @keyframes beat { 50% { transform: scale(1.08); opacity: .75; } }
+    .in { opacity: 0; animation: in 12s ease infinite; }
+    @keyframes in { 0% { opacity: 0; transform: translateX(-8px); } 5%, 88% { opacity: 1; transform: none; } 95%, 100% { opacity: 0; } }
+    .arrow { stroke-dasharray: 4 8; animation: flow 1.2s linear infinite; }
+    @keyframes flow { to { stroke-dashoffset: -12; } }
+  </style>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#232229" stroke-width="1" opacity=".6"/></pattern>
+    <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#9D8CFF" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#9D8CFF" stop-opacity="0"/>
+    </radialGradient>
+    <marker id="tip" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#9D8CFF"/></marker>
+    <path id="orbit" d="M320 40 A230 230 0 1 1 319.9 40"/>
+  </defs>
+
+  <rect width="1200" height="540" rx="18" fill="#09090B"/>
+  <rect width="1200" height="540" rx="18" fill="url(#grid)"/>
+  <rect x=".5" y=".5" width="1199" height="539" rx="17.5" fill="none" stroke="#2C2B33"/>
+
+  <!-- anéis -->
+  <circle cx="320" cy="270" r="230" fill="#0E0E12" stroke="#2C2B33"/>
+  <circle class="spin" cx="320" cy="270" r="230" fill="none" stroke="#6F6C78" stroke-width="1" stroke-dasharray="2 10"/>
+  <circle cx="320" cy="270" r="158" fill="#121217" stroke="#2C2B33"/>
+  <circle class="spin rev" cx="320" cy="270" r="158" fill="none" stroke="#8C8A93" stroke-width="1" stroke-dasharray="14 8"/>
+  <circle cx="320" cy="270" r="140" fill="url(#halo)"/>
+  <circle cx="320" cy="270" r="86" fill="#15151A" stroke="#9D8CFF" stroke-opacity=".6"/>
+  <circle class="spin fast" cx="320" cy="270" r="86" fill="none" stroke="#9D8CFF" stroke-width="2" stroke-dasharray="40 230"/>
+  <circle class="core" cx="320" cy="270" r="8" fill="#9D8CFF"/>
+
+  <text x="320" y="60" fill="#8C8A93" text-anchor="middle" style="font-size:13px;letter-spacing:.2em">INFRASTRUCTURE</text>
+  <text x="320" y="134" fill="#ECE8E1" text-anchor="middle" style="font-size:13px;letter-spacing:.2em">APPLICATION</text>
+  <text x="320" y="252" fill="#9D8CFF" text-anchor="middle" style="font-size:14px;letter-spacing:.2em">DOMAIN</text>
+  <text x="320" y="300" fill="#6F6C78" text-anchor="middle" style="font-size:11px">sem framework</text>
+
+  <!-- dependências apontando para dentro -->
+  <g stroke="#9D8CFF" stroke-width="1.5" fill="none" marker-end="url(#tip)">
+    <path class="arrow" d="M100 270H226"/>
+    <path class="arrow" d="M540 270H414"/>
+    <path class="arrow" d="M320 500V368"/>
+  </g>
+
+  <!-- pacote da requisição orbitando -->
+  <circle r="5" fill="#ECE8E1">
+    <animateMotion dur="9s" repeatCount="indefinite" rotate="auto"><mpath href="#orbit"/></animateMotion>
+  </circle>
+  <circle r="12" fill="#ECE8E1" opacity=".15">
+    <animateMotion dur="9s" repeatCount="indefinite"><mpath href="#orbit"/></animateMotion>
+  </circle>
+
+  <!-- legenda -->
+  <text x="640" y="72" fill="#8C8A93" style="font-size:13px;letter-spacing:.2em">// COMO EU ORGANIZO UM SISTEMA</text>
+  <text x="640" y="112" fill="#ECE8E1" style="font-size:26px">Dependências apontam para dentro.</text>
+
+  <g class="in" style="animation-delay:.4s">
+    <rect x="640" y="150" width="4" height="70" fill="#9D8CFF"/>
+    <text x="662" y="172" fill="#9D8CFF" style="font-size:15px">Domain</text>
+    <text x="662" y="196" fill="#ECE8E1" style="font-size:14px">Entidades ricas, invariantes, value objects.</text>
+    <text x="662" y="216" fill="#8C8A93" style="font-size:13px">A regra de negócio não sabe que existe banco.</text>
+  </g>
+  <g class="in" style="animation-delay:1.4s">
+    <rect x="640" y="250" width="4" height="70" fill="#ECE8E1"/>
+    <text x="662" y="272" fill="#ECE8E1" style="font-size:15px">Application</text>
+    <text x="662" y="296" fill="#ECE8E1" style="font-size:14px">CQRS + MediatR, FluentValidation, idempotência.</text>
+    <text x="662" y="316" fill="#8C8A93" style="font-size:13px">Um caso de uso por vez.</text>
+  </g>
+  <g class="in" style="animation-delay:2.4s">
+    <rect x="640" y="350" width="4" height="70" fill="#6F6C78"/>
+    <text x="662" y="372" fill="#8C8A93" style="font-size:15px">Infrastructure</text>
+    <text x="662" y="396" fill="#ECE8E1" style="font-size:14px">EF Core + PostgreSQL, Hangfire, SignalR, Docker.</text>
+    <text x="662" y="416" fill="#8C8A93" style="font-size:13px">Onde o dado não pode se perder.</text>
+  </g>
+  <g class="in" style="animation-delay:3.4s">
+    <text x="640" y="476" fill="#6F6C78" style="font-size:13px">› dinheiro em <tspan fill="#9D8CFF">decimal</tspan>, nunca float · migrations desde o dia um</text>
+  </g>
+</svg>

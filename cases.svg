@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-label="Log de rotas dos cases: Beemov, Metup CRM, Confraria, Sementinhas e Gestão Financeira em produção com dados reais; Wedding Planner, Xadrez Console, Caulim e Fôlego públicos.">
+  <style>
+    text { font-family: ui-monospace, 'SFMono-Regular', 'Cascadia Code', Menlo, Consolas, monospace; font-size: 15px; white-space: pre; }
+    .row { opacity: 0; animation: row 14s ease infinite; }
+    @keyframes row { 0% { opacity: 0; transform: translateY(6px); } 3%, 90% { opacity: 1; transform: none; } 96%, 100% { opacity: 0; } }
+    .bar { transform-box: fill-box; transform-origin: left; transform: scaleX(0); animation: grow 14s cubic-bezier(.16,1,.3,1) infinite; }
+    @keyframes grow { 0% { transform: scaleX(0); } 6%, 90% { transform: scaleX(1); opacity: 1; } 96%, 100% { transform: scaleX(1); opacity: 0; } }
+    .pulse { animation: pulse 2.4s ease-in-out infinite; }
+    @keyframes pulse { 50% { opacity: .35; } }
+  </style>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#232229" stroke-width="1" opacity=".6"/></pattern>
+  </defs>
+  <rect width="1200" height="520" rx="18" fill="#09090B"/>
+  <rect width="1200" height="520" rx="18" fill="url(#grid)"/>
+  <rect x=".5" y=".5" width="1199" height="519" rx="17.5" fill="none" stroke="#2C2B33"/>
+
+  <circle class="pulse" cx="62" cy="40" r="5" fill="#9D8CFF"/>
+  <text x="80" y="46" fill="#8C8A93" style="font-size:14px;letter-spacing:.06em">davi@api · tail -f access.log</text>
+  <text x="1144" y="46" fill="#8C8A93" text-anchor="end" style="font-size:14px;letter-spacing:.06em">9 cases · 5 em produção</text>
+  <line x1="40" x2="1160" y1="66" y2="66" stroke="#232229"/>
+
+  <text x="56" y="98" fill="#6F6C78" style="font-size:12px;letter-spacing:.14em">MÉTODO  ROTA                         STATUS        O QUE É</text>
+
+  <g class="row" style="animation-delay:.2s">
+    <text x="56" y="138" fill="#9D8CFF">GET</text><text x="128" y="138" fill="#ECE8E1">/cases/beemov</text>
+    <text x="410" y="138" fill="#E8B04B">● produção</text><text x="560" y="138" fill="#8C8A93">SaaS ERP + PDV multi-tenant · 680+ testes</text>
+    <rect class="bar" style="animation-delay:.2s" x="1000" y="127" width="120" height="12" rx="2" fill="#9D8CFF"/>
+  </g>
+  <g class="row" style="animation-delay:.6s">
+    <text x="56" y="176" fill="#9D8CFF">GET</text><text x="128" y="176" fill="#ECE8E1">/cases/metup-crm</text>
+    <text x="410" y="176" fill="#E8B04B">● produção</text><text x="560" y="176" fill="#8C8A93">Sistema operacional comercial</text>
+    <rect class="bar" style="animation-delay:.6s" x="1000" y="165" width="96" height="12" rx="2" fill="#9D8CFF"/>
+  </g>
+  <g class="row" style="animation-delay:1s">
+    <text x="56" y="214" fill="#9D8CFF">GET</text><text x="128" y="214" fill="#ECE8E1">/cases/confraria</text>
+    <text x="410" y="214" fill="#E8B04B">● produção</text><text x="560" y="214" fill="#8C8A93">ERP + PDV sob medida para loja</text>
+    <rect class="bar" style="animation-delay:1s" x="1000" y="203" width="84" height="12" rx="2" fill="#9D8CFF"/>
+  </g>
+  <g class="row" style="animation-delay:1.4s">
+    <text x="56" y="252" fill="#9D8CFF">GET</text><text x="128" y="252" fill="#ECE8E1">/cases/sementinhas</text>
+    <text x="410" y="252" fill="#E8B04B">● produção</text><text x="560" y="252" fill="#8C8A93">Gestão de creche · LGPD + auditoria</text>
+    <rect class="bar" style="animation-delay:1.4s" x="1000" y="241" width="72" height="12" rx="2" fill="#9D8CFF"/>
+  </g>
+  <g class="row" style="animation-delay:1.8s">
+    <text x="56" y="290" fill="#9D8CFF">GET</text><text x="128" y="290" fill="#ECE8E1">/cases/financeiro</text>
+    <text x="410" y="290" fill="#E8B04B">● produção</text><text x="560" y="290" fill="#8C8A93">Financeiro multiunidade</text>
+    <rect class="bar" style="animation-delay:1.8s" x="1000" y="279" width="64" height="12" rx="2" fill="#9D8CFF"/>
+  </g>
+  <g class="row" style="animation-delay:2.2s">
+    <text x="56" y="328" fill="#9D8CFF">GET</text><text x="128" y="328" fill="#ECE8E1">/cases/wedding-planner</text>
+    <text x="410" y="328" fill="#4ADE80">● 200 OK</text><text x="560" y="328" fill="#8C8A93">API de orçamento de casamento</text>
+    <rect class="bar" style="animation-delay:2.2s" x="1000" y="317" width="44" height="12" rx="2" fill="#ECE8E1"/>
+  </g>
+  <g class="row" style="animation-delay:2.6s">
+    <text x="56" y="366" fill="#9D8CFF">GET</text><text x="128" y="366" fill="#ECE8E1">/cases/xadrez</text>
+    <text x="410" y="366" fill="#4ADE80">● 200 OK</text><text x="560" y="366" fill="#8C8A93">Motor de xadrez em C# do zero</text>
+    <rect class="bar" style="animation-delay:2.6s" x="1000" y="355" width="36" height="12" rx="2" fill="#ECE8E1"/>
+  </g>
+  <g class="row" style="animation-delay:3s">
+    <text x="56" y="404" fill="#9D8CFF">GET</text><text x="128" y="404" fill="#ECE8E1">/cases/caulim</text>
+    <text x="410" y="404" fill="#4ADE80">● 200 OK</text><text x="560" y="404" fill="#8C8A93">WebGL · porcelana no torno</text>
+    <rect class="bar" style="animation-delay:3s" x="1000" y="393" width="52" height="12" rx="2" fill="#ECE8E1"/>
+  </g>
+  <g class="row" style="animation-delay:3.4s">
+    <text x="56" y="442" fill="#9D8CFF">GET</text><text x="128" y="442" fill="#ECE8E1">/cases/folego</text>
+    <text x="410" y="442" fill="#4ADE80">● 200 OK</text><text x="560" y="442" fill="#8C8A93">WebGL · scroll como profundidade</text>
+    <rect class="bar" style="animation-delay:3.4s" x="1000" y="431" width="48" height="12" rx="2" fill="#ECE8E1"/>
+  </g>
+
+  <g class="row" style="animation-delay:4s">
+    <line x1="40" x2="1160" y1="466" y2="466" stroke="#232229"/>
+    <text x="56" y="494" fill="#6F6C78" style="font-size:13px"><tspan fill="#E8B04B">●</tspan> produção = dados reais de clientes, demo em call   <tspan fill="#4ADE80">●</tspan> 200 OK = aberto para visitar</text>
+  </g>
+</svg>
