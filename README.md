@@ -72,7 +72,7 @@ Meu portfólio é uma viagem 3D por dentro de uma requisição HTTP, do Kestrel 
 
 <div align="center">
   <a href="https://davi.metup.com.br">
-    <img src="hero.webp" width="100%" alt="Hero do portfólio: o nome DAVI MAXIMO QUOOS em tipografia gigante e o retrato desenhado com caracteres de código" />
+    <img src="hero.png" width="100%" alt="Hero do portfólio: o nome DAVI MAXIMO QUOOS em tipografia gigante e o retrato desenhado com caracteres de código" />
   </a>
   <sub><b>↑ clique para abrir o portfólio, uma experiência WebGL em <a href="https://davi.metup.com.br">davi.metup.com.br</a></b></sub>
 </div>
